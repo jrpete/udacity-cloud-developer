@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: gnosiscontainer/udagram-deploy-image 
+  backend_user:
+    build:
+      context: ../../udagram-backend-user
+    image: gnosiscontainer/udagram-backend-user-image 
+  backend_feed:
+    build:
+      context: ../../udagram-backend-feed 
+    image: gnosiscontainer/udagram-backend-feed-image 
+  frontend:
+    build:
+      context: ../../udagram-frontend
+    image: gnosiscontainer/udagram-frontend-image:dev
