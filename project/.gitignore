@@ -1,3 +1,4 @@
 *.sh
 *env-configmap.yml
 *env-secret.yml
+*aws-secret.yml
