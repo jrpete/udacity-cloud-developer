@@ -3,16 +3,20 @@ services:
   reverseproxy:
     build:
       context: .
-    image: gnosiscontainer/udagram-deploy-image 
+      dockerfile: Dockerfile
+    image: gnosiscontainer/udagram-deploy-image
   backend_user:
     build:
       context: ../../udagram-backend-user
+      dockerfile: Dockerfile
     image: gnosiscontainer/udagram-backend-user-image 
   backend_feed:
     build:
-      context: ../../udagram-backend-feed 
+      context: ../../udagram-backend-feed
+      dockerfile: Dockerfile
     image: gnosiscontainer/udagram-backend-feed-image 
   frontend:
     build:
       context: ../../udagram-frontend
+      dockerfile: Dockerfile
     image: gnosiscontainer/udagram-frontend-image:dev
