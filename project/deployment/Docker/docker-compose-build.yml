@@ -7,8 +7,7 @@ services:
     image: gnosiscontainer/udagram-deploy-image
   backend_user:
     build:
-      context: ../../udagram-backend-user
-      dockerfile: Dockerfile
+      context: ../../udagram-backend-user/Dockerfile
     image: gnosiscontainer/udagram-backend-user-image 
   backend_feed:
     build:
